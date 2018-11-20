@@ -25,7 +25,7 @@ public class ErrorResource {
 			 bean = service.getBean(id);
 		} catch (NoSuchElementException k)
 		{
-			throw new BeanNotFoundException("bean: "+id+ " not Found" );
+			throw new BeanNotFoundException("Bean con id: "+id+ " no encontrado" );
 		}
 		return bean;
 	}
