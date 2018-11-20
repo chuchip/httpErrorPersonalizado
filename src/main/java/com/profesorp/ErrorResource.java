@@ -18,7 +18,7 @@ public class ErrorResource {
 	MiBeanService service;
 	
 	@GetMapping("/get/{id}")
-	public MiBean retrieveUser(@PathVariable int id) {
+	public MiBean getBean(@PathVariable int id) {
 		MiBean bean = null;
 		try 
 		{
@@ -27,8 +27,6 @@ public class ErrorResource {
 		{
 			throw new BeanNotFoundException("bean: "+id+ " not Found" );
 		}
-		
-		
 		return bean;
 	}
 }
